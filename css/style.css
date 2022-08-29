@@ -117,7 +117,7 @@ a.switcher:before {
   bottom: 0;
   left: 0;
   margin: auto;
-  border-top: 200px solid rgba(255, 255, 255, 0.5);
+  border-top: 200px solid rgba(0, 0, 0, 0.5);
   border-right: 100px solid transparent;
   border-left: 100px solid transparent;
   border-bottom: 0 solid transparent;
@@ -133,7 +133,7 @@ a.switcher:before {
   top: -194px;
   left: -90px;
   margin: auto;
-  border-top: 180px solid rgba(255, 255, 255, 0.5);
+  border-top: 180px solid rgba(0, 0, 0, 0.5);
   border-right: 90px solid transparent;
   border-left: 90px solid transparent;
   border-bottom: 0 solid transparent;
@@ -220,7 +220,7 @@ a.switcher:before {
   position: absolute;
   top: 0;
   color: #fff;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.5);
   overflow: hidden;
   width: 720px;
   height: 128px;
