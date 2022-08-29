@@ -25,6 +25,7 @@ $(document).ready(function () {
 
   $('body').css({
     'background': 'url(' + bgm[Math.floor(Math.random() * bgm.length)] + ') no-repeat center center fixed',
+    'background-color': '#000',
     'background-size': 'cover',
   });
 
