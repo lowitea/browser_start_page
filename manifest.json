@@ -9,5 +9,10 @@
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
-  "permissions": ["tabs"]
+  "permissions": ["tabs"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "start_page@lowit.ru"
+    }
+  }
 }
