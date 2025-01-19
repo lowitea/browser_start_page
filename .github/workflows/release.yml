@@ -43,7 +43,7 @@ jobs:
           channel: unlisted
 
           license: Apache-2.0
-          licenseFile: LICENSE.md
+          licenseFile: ../LICENSE.md
 
           # Specify API secrets. No need to specify apiUrlPrefix, it defaults to AMO production
           apiKey: ${{ secrets.AMO_SIGN_KEY }}
