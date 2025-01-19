@@ -1,6 +1,5 @@
-$("body").ready(function () {
-  // random backgrounds
-  var bgm = [
+document.addEventListener("DOMContentLoaded", () => {
+  const backgrounds = [
     // "images/1.jpg",
     // "images/2.jpg",
     // "images/3.jpg",
@@ -22,54 +21,45 @@ $("body").ready(function () {
     // "images/19.jpg",
   ];
 
-  $("body").css({
-    background:
-      "url(" +
-      bgm[Math.floor(Math.random() * bgm.length)] +
-      ") no-repeat center center fixed",
-    "background-color": "#000",
-    "background-size": "cover",
-  });
-});
+  const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+  document.body.style.cssText = `
+      background: url(${randomBg}) no-repeat center center fixed;
+      background-color: #000;
+      background-size: cover;
+    `;
 
-$(document).ready(function () {
-  Number.prototype.pad = function (n) {
-    for (var r = this.toString(); r.length < n; r = 0 + r);
-    return r;
+  const pad = (num, size = 2) => String(num).padStart(size, "0");
+
+  const updateClock = () => {
+    const now = new Date();
+    const elements = {
+      mon: [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ][now.getMonth()],
+      d: now.getDate(),
+      y: now.getFullYear(),
+      h: pad(now.getHours()),
+      m: pad(now.getMinutes()),
+      s: pad(now.getSeconds()),
+    };
+
+    for (const [id, value] of Object.entries(elements)) {
+      const element = document.getElementById(id);
+      if (element) element.textContent = value;
+    }
   };
 
-  function updateClock() {
-    var now = new Date();
-    var sec = now.getSeconds(),
-      min = now.getMinutes(),
-      hou = now.getHours(),
-      mo = now.getMonth(),
-      dy = now.getDate(),
-      yr = now.getFullYear();
-    var months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-    var tags = ["mon", "d", "y", "h", "m", "s"],
-      corr = [months[mo], dy, yr, hou.pad(2), min.pad(2), sec.pad(2)];
-    for (var i = 0; i < tags.length; i++)
-      document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
-  }
-
-  // first time run
   updateClock();
-
-  setInterval(function () {
-    updateClock();
-  }, 1000);
+  setInterval(updateClock, 1000);
 });
