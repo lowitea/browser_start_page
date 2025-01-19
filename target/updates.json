@@ -1,10 +1,10 @@
 {
   "addons": {
-    "{abcd1234-1abc-1234-12ab-abcdef123456}": {
+    "{b60b1ca7-ac66-4c7d-b469-7da05c68f0b1}": {
       "updates": [
         {
-          "version": "3.0",
-          "update_link": "https://example.com/addon-0.3.xpi"
+          "version": "3.2",
+          "update_link": "https://lowitea.github.io/browser_start_page/lowits_start_page-3.2.xpi"
         }
       ]
     }

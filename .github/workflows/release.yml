@@ -1,8 +1,9 @@
 name: "Release"
+
 on:
   push:
-    branches:
-      - master
+    tags:
+      - "*"
 
 jobs:
   sign:
@@ -41,6 +42,9 @@ jobs:
           apiSecret: ${{ secrets.AMO_SIGN_SECRET }}
           timeout: 900000
 
+      - name: "Move artifact to target dir"
+        run: mv ${{ steps.web-ext-sign.outputs.target }} target/lowits_start_page-${{  github.ref_name }}.xpi
+
       - name: Publish
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -48,4 +52,3 @@ jobs:
           publish_dir: ./target
           publish_branch: release
           force_orphan: true
-
