@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Lowit's Start Page",
-  "version": "3.2",
+  "version": "3.3",
   "description": "Lowit's Start Page",
   "icons": {
     "96": "images/house.png"
@@ -12,7 +12,7 @@
   "permissions": ["tabs"],
   "browser_specific_settings": {
     "gecko": {
-      "id": "start_page@lowit.ru",
+      "id": "{9f892321-fbc4-4d2f-bcd7-1e4053c59643}",
       "update_url": "https://lowitea.github.io/browser_start_page/updates.json"
     }
   }
