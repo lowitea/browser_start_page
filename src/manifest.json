@@ -9,7 +9,13 @@
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
-  "permissions": ["tabs"],
+  "permissions": [
+    "tabs",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
   "browser_specific_settings": {
     "gecko": {
       "id": "{9f892321-fbc4-4d2f-bcd7-1e4053c59643}",

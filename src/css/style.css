@@ -11,13 +11,17 @@ body {
 }
 
 #timedate {
-  font: 43px "Major Mono Display", monospace;
+  font:
+    43px "Major Mono Display",
+    monospace;
   text-align: left;
   color: #fff;
   text-transform: uppercase;
   padding: 100px 100px;
-  text-shadow: 2px 2px 5px rgb(0 107 231 / 80%),
-    -2px -2px 5px rgb(255 0 0 / 80%), 0 0 0.3em rgb(0 107 231 / 80%);
+  text-shadow:
+    2px 2px 5px rgb(0 107 231 / 80%),
+    -2px -2px 5px rgb(255 0 0 / 80%),
+    0 0 0.3em rgb(0 107 231 / 80%);
 }
 
 #timedate:before {
@@ -29,6 +33,57 @@ body {
   position: fixed;
   top: 50px;
   left: 50px;
-  box-shadow: 2px 2px 5px rgb(0 107 231 / 80%), -2px -2px 5px rgb(255 0 0 / 80%),
+  box-shadow:
+    2px 2px 5px rgb(0 107 231 / 80%),
+    -2px -2px 5px rgb(255 0 0 / 80%),
     0 0 0.3em rgb(0 107 231 / 80%);
+}
+
+#links {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 25px;
+  bottom: 0;
+  right: 0;
+}
+
+#links a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  margin: 5px;
+  padding: 5px;
+
+  opacity: 0.4;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#links #plus {
+  background: none;
+  color: white;
+  font-size: 30px;
+  text-shadow:
+    2px 2px 5px rgb(0 107 231 / 80%),
+    -2px -2px 5px rgb(255 0 0 / 80%),
+    0 0 0.3em rgb(0 107 231 / 80%);
+  cursor: pointer;
+}
+
+#links a:hover {
+  opacity: 1;
+}
+
+#links img {
+  width: 100%;
 }
