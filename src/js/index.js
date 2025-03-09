@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (event.button === 2) {
         const confirmed = confirm("Delete?!\nEither OK or Cancel.");
         if (confirmed) {
-          links.delete(event.target.href);
+          links.delete(event.target.parentNode.href);
           browser.storage.local.set({ links: links });
           linksContainer.removeChild(linkElement);
         }
