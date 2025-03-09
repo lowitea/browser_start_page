@@ -140,6 +140,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   let links = new Map();
 
   const addLinkOnPage = async (link) => {
+    if (!link.startsWith("http")) {
+      return;
+    }
     const linksContainer = document.getElementById("links");
     const linkElement = document.createElement("a");
     linkElement.href = link;
@@ -181,6 +184,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   const plusButton = document.getElementById("plus");
   plusButton.addEventListener("click", async () => {
     const link = window.prompt("add link", "defaultText");
+    if (!link.startsWith("http")) {
+      console.error(`link must start with http or https, got: ${link}`);
+      return;
+    }
     links.set(link, link);
     browser.storage.local.set({ links: links });
     await addLinkOnPage(link);
