@@ -1,9 +1,5 @@
 # Lowit's Start Page
 
-## Publish
+## Installation
 
-1. Update version in `src/manifest.json` file
-1. Update `target/updates.json` file
-1. Commit files `git commit -m "bump version" src/manifest.json target/updates.json`
-1. Make a new tag `git tag -a VERSION`
-1. Push a new release `git push origin master --follow-tags`
+Open link [https://lowitea.github.io/browser_start_page/lowits_start_page-3.7.xpi](https://lowitea.github.io/browser_start_page/lowits_start_page-3.7.xpi)
