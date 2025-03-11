@@ -146,7 +146,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const linksContainer = document.getElementById("links");
     const linkElement = document.createElement("a");
     linkElement.href = link;
-    linkElement.target = "_blank";
     linkElement.addEventListener("mousedown", (event) => {
       if (event.button === 2) {
         const confirmed = confirm("Delete?!\nEither OK or Cancel.");
